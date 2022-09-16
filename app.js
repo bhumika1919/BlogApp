@@ -9,10 +9,9 @@ app.use(cors());
 app.use(express.json());
 app.use("/api/user", router);
 app.use("/api/blog", blogRouter);
-mongoose.connect("mongodb://localhost:27017/BlogApp")
+mongoose.connect("mongodb+srv://admin:vvmI7pMR6cWwBAS8@cluster0.qbps9s3.mongodb.net/Newblog?retryWrites=true&w=majority")
   .then(() => app.listen(5000))
   .then(() =>console.log("Connected TO Database and Listening TO Localhost 5000")
   ).catch((err) => console.log(err));
 
-  //mongodb://localhost:27017/BlogApp
-  //mongodb+srv://Harsh:harsh@cluster0.cptwhqk.mongodb.net/Blog?retryWrites=true&w=majority
+  //vvmI7pMR6cWwBAS8
